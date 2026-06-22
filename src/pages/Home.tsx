@@ -7,7 +7,7 @@ import styles from './Home.module.css';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const } }
 };
 
 export function Home() {
@@ -28,7 +28,7 @@ export function Home() {
             <motion.h1 
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
               className={styles.heroTitle}
             >
               Manchester's Premium <br />
@@ -38,7 +38,7 @@ export function Home() {
             <motion.p 
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.9, delay: 0.25, ease: [0.16, 1, 0.3, 1] as const }}
               className={styles.heroSubtitle}
             >
               Not just another trade counter. We supply high-end lighting, commercial gear, and expert advice to professionals and the public.
@@ -47,7 +47,7 @@ export function Home() {
             <motion.div 
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
               className={styles.heroButtons}
             >
               <Link to="/contact" className="btn btn-primary">
@@ -63,7 +63,7 @@ export function Home() {
             className={styles.heroImageCol}
             initial={{ opacity: 0, scale: 0.95, rotate: 2 }}
             animate={{ opacity: 1, scale: 1, rotate: -1 }}
-            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] as const }}
           >
             <div className={styles.polaroidFrame}>
               <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1000&auto=format" alt="HNW Electrical Showroom" className={styles.heroImg} />
@@ -75,7 +75,7 @@ export function Home() {
               className={styles.floatingImage}
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+              transition={{ duration: 1, delay: 0.8, ease: "easeOut" as const }}
             >
               <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=800&auto=format" alt="Electrician at work" />
             </motion.div>
@@ -127,19 +127,23 @@ export function Home() {
           
           <div className={styles.masonryGrid}>
             
-            <motion.Link to="/about" className={`${styles.masonryCard} ${styles.masonryLarge}`} whileHover="hover" initial="initial">
-              <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=800&auto=format" alt="Commercial Lighting" className={styles.masonryImg} />
-              <div className={styles.masonryOverlay}>
-                <motion.h3 variants={{ hover: { y: 0, opacity: 1 }, initial: { y: 20, opacity: 0 } }}>Architectural & Commercial Lighting</motion.h3>
-              </div>
-            </motion.Link>
+            <motion.div className={`${styles.masonryCard} ${styles.masonryLarge}`} whileHover="hover" initial="initial">
+              <Link to="/about" style={{ display: 'block', height: '100%', textDecoration: 'none' }}>
+                <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?q=80&w=800&auto=format" alt="Commercial Lighting" className={styles.masonryImg} />
+                <div className={styles.masonryOverlay}>
+                  <motion.h3 variants={{ hover: { y: 0, opacity: 1 }, initial: { y: 20, opacity: 0 } }}>Architectural & Commercial Lighting</motion.h3>
+                </div>
+              </Link>
+            </motion.div>
             
-            <motion.Link to="/about" className={styles.masonryCard} whileHover="hover" initial="initial">
-              <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800&auto=format" alt="EV Chargers" className={styles.masonryImg} />
-              <div className={styles.masonryOverlay}>
-                <motion.h3 variants={{ hover: { y: 0, opacity: 1 }, initial: { y: 20, opacity: 0 } }}>EV Charging</motion.h3>
-              </div>
-            </motion.Link>
+            <motion.div className={styles.masonryCard} whileHover="hover" initial="initial">
+              <Link to="/about" style={{ display: 'block', height: '100%', textDecoration: 'none' }}>
+                <img src="https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=800&auto=format" alt="EV Chargers" className={styles.masonryImg} />
+                <div className={styles.masonryOverlay}>
+                  <motion.h3 variants={{ hover: { y: 0, opacity: 1 }, initial: { y: 20, opacity: 0 } }}>EV Charging</motion.h3>
+                </div>
+              </Link>
+            </motion.div>
             
             <motion.div className={styles.masonryCard} style={{ backgroundColor: 'var(--navy-800)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px' }}>
                <div style={{ textAlign: 'center' }}>

@@ -6,7 +6,7 @@ import aboutStyles from './About.module.css';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const } }
 };
 
 export function WhoWeHelp() {
@@ -83,7 +83,7 @@ export function WhoWeHelp() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" as const }}
             className={styles.ctaBanner}
           >
             <h2 className="section-title" style={{ marginBottom: '12px' }}>Not Sure What You Need?</h2>
