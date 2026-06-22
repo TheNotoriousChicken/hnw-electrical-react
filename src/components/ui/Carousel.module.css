@@ -1,0 +1,109 @@
+.carouselWrapper {
+  margin-top: 48px;
+  overflow: hidden;
+}
+
+.carouselTrackWrapper {
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 24px;
+}
+
+.carouselCard {
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.04);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  position: relative;
+  transition: border-color 0.3s var(--ease-out);
+}
+
+.carouselCard:hover {
+  border-color: rgba(245, 166, 35, 0.2);
+}
+
+.stars {
+  color: var(--amber-400);
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+.text {
+  font-size: 1rem;
+  color: var(--gray-200);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.text::before {
+  content: '"';
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--amber-500);
+  opacity: 0.3;
+  line-height: 0;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.author {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.controlBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--white);
+  transition: all 0.3s var(--ease-out);
+}
+
+.controlBtn:hover {
+  background: var(--amber-500);
+  color: var(--navy-900);
+  border-color: var(--amber-500);
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out);
+}
+
+.activeDot {
+  background: var(--amber-400);
+  box-shadow: 0 0 10px var(--amber-glow);
+  transform: scale(1.2);
+}

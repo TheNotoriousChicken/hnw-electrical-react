@@ -1,0 +1,87 @@
+.audienceCard {
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s var(--ease-out);
+  box-shadow: var(--shadow-sm);
+}
+
+.audienceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--amber-500), var(--amber-300));
+  transform: scaleX(0);
+  transition: transform 0.4s var(--ease-out);
+  transform-origin: left;
+}
+
+.audienceCard:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.audienceCard:hover::before {
+  transform: scaleX(1);
+}
+
+.audienceIcon {
+  width: 64px;
+  height: 64px;
+  background: rgba(245, 166, 35, 0.1);
+  color: var(--amber-400);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.audienceTitle {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: var(--white);
+}
+
+.audienceText {
+  color: var(--gray-300);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.audienceList {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.audienceList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--gray-200);
+  font-size: 0.95rem;
+}
+
+.audienceList li svg {
+  color: var(--amber-400);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ctaBanner {
+  margin-top: 80px;
+  text-align: center;
+  padding: 60px 24px;
+  background: linear-gradient(135deg, rgba(245, 166, 35, 0.08), rgba(245, 166, 35, 0.02));
+  border: 1px solid rgba(245, 166, 35, 0.2);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glow);
+}

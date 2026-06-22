@@ -1,0 +1,106 @@
+.contactCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  transition: all 0.3s var(--ease-out);
+}
+
+.contactCard:hover {
+  border-color: rgba(245, 166, 35, 0.2);
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  background: rgba(245, 166, 35, 0.1);
+  color: var(--amber-400);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactCard h4 {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+  color: var(--white);
+}
+
+.contactCard p,
+.contactCard a {
+  color: var(--gray-300);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.contactCard a:hover {
+  color: var(--amber-400);
+}
+
+.hoursTable {
+  width: 100%;
+  margin-top: 12px;
+  border-collapse: collapse;
+}
+
+.hoursTable tr {
+  border-bottom: var(--border-subtle);
+}
+
+.hoursTable tr:last-child {
+  border-bottom: none;
+}
+
+.hoursTable td {
+  padding: 10px 0;
+  color: var(--gray-200);
+  font-size: 0.95rem;
+}
+
+.hoursTable td:first-child {
+  font-weight: 500;
+  color: var(--white);
+  width: 50%;
+}
+
+.mapContainer {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: var(--border-subtle);
+  aspect-ratio: 4/3;
+  width: 100%;
+  box-shadow: var(--shadow-md);
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.socials a {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+  border: var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-300);
+  transition: all 0.3s var(--ease-out);
+}
+
+.socials a:hover {
+  background: var(--amber-500);
+  color: var(--navy-900);
+  border-color: var(--amber-500);
+  transform: translateY(-4px);
+}

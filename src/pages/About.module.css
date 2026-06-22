@@ -1,0 +1,38 @@
+.pageHero {
+  padding: calc(var(--header-height) + 60px) 0 60px;
+  background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pageHero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(245, 166, 35, 0.08) 0%, transparent 60%);
+}
+
+.storyGrid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.valueCard {
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: all 0.35s var(--ease-out);
+}
+
+.valueIcon {
+  width: 52px;
+  height: 52px;
+  background: rgba(245, 166, 35, 0.1);
+  color: var(--amber-400);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
